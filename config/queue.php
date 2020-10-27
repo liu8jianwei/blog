@@ -93,7 +93,7 @@ return [
 
         'hosts' => [
             [
-                'host' => env('RABBITMQ_HOST', '192.168.159.166'),
+                'host' => env('RABBITMQ_HOST', '182.92.218.34'),
                 'port' => env('RABBITMQ_PORT', 15672),
                 'user' => env('RABBITMQ_USER', 'admin'),
                 'password' => env('RABBITMQ_PASSWORD', 'admin'),

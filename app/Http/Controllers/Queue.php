@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Jobs\Queue as JobsQueue;
-use App\User;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 
@@ -18,6 +18,8 @@ class Queue extends Controller
      */
     public function index(Request $request)
     {
+        echo 234;
+        exit;
         Log::info('Start: ' . date('Y-m-d H:i:s', time()));
         $arr = ['time' => time(), 'id' => rand(100, 999)];
         sleep(2);

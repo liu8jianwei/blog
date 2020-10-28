@@ -96,17 +96,17 @@ return [
                 'port' => env('RABBITMQ_PORT', 15672),
                 'user' => env('RABBITMQ_USER', 'admin'),
                 'password' => env('RABBITMQ_PASSWORD', 'admin'),
-                'vhost' => env('RABBITMQ_VHOST', '/'),
+                'vhost'    => env('RABBITMQ_VHOST', '/'),
             ],
         ],
 
         'options' => [
             'ssl_options' => [
-                'cafile' => env('RABBITMQ_SSL_CAFILE', null),
+                'cafile'     => env('RABBITMQ_SSL_CAFILE', null),
                 'local_cert' => env('RABBITMQ_SSL_LOCALCERT', null),
-                'local_key' => env('RABBITMQ_SSL_LOCALKEY', null),
+                'local_key'   => env('RABBITMQ_SSL_LOCALKEY', null),
                 'verify_peer' => env('RABBITMQ_SSL_VERIFY_PEER', true),
-                'passphrase' => env('RABBITMQ_SSL_PASSPHRASE', null),
+                'passphrase'  => env('RABBITMQ_SSL_PASSPHRASE', null),
             ],
         ],
 

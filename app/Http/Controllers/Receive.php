@@ -11,7 +11,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
-class QueueController extends Controller
+class ReceiveController extends Controller
 {
     /**
      * @Notes: 使用队列插入数据

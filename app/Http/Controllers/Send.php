@@ -11,7 +11,7 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 
 
-class QueueController extends Controller
+class SendController extends Controller
 {
     /**
      * @Notes: 使用队列插入数据

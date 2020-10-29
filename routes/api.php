@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\QueueController;
+use App\Http\Controllers\SendController;
+use App\Http\Controllers\ReceiveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,7 +22,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('queue', [QueueController::class, 'index']);
-Route::get('send', [Send::class, 'index']);
-Route::get('receive', [Receive::class, 'index']);
+Route::get('send', [SendController::class, 'index']);
+Route::get('receive', [ReceiveController::class, 'index']);
 
 Route::get('index', 'Queue@insert');

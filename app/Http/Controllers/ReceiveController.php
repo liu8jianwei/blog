@@ -20,7 +20,8 @@ class ReceiveController extends Controller
      */
     public function index(Request $request)
     {
-        $connection = new AMQPStreamConnection('http://182.92.218.34/', 5672, 'guest', 'guest');
+        set_time_limit(0);
+        $connection = new AMQPStreamConnection('182.92.218.34', 5672, 'admin', 'admin');
         $channel = $connection->channel();
 
         $channel->queue_declare('hello', false, false, false, false);

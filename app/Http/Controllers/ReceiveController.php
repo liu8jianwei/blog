@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 
-require_once __DIR__ . '/vendor/autoload.php';
-
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 
 class ReceiveController extends Controller

@@ -20,5 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('queue', [QueueController::class, 'index']);
+Route::get('send', [Send::class, 'index']);
+Route::get('receive', [Receive::class, 'index']);
 
 Route::get('index', 'Queue@insert');

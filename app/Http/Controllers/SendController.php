@@ -21,12 +21,16 @@ class SendController extends Controller
     {
         $connection = new AMQPStreamConnection('182.92.218.34', 5672, 'admin', 'admin');
         $channel = $connection->channel();
-        $channel->queue_declare('hello', false, false, false, false);
 
-        $msg = new AMQPMessage('Hello World!');
-        $channel->basic_publish($msg, '', 'hello');
+        $channel->exchange_declare('logs', 'fanout', false, false, false);
 
-        echo " [x] Sent 'Hello World!'\n";
+        $data = "info: Hello World!";
+        $msg = new AMQPMessage($data);
+
+        $channel->basic_publish($msg, 'logs');
+
+        echo " [x] Sent ", $data, "\n";
+
         $channel->close();
         $connection->close();
     }

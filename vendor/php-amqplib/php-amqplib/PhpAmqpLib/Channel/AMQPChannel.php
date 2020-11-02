@@ -195,7 +195,7 @@ class AMQPChannel extends AbstractChannel
 
         return $this->wait(array(
             $this->waitHelper->get_wait('channel.close_ok')
-        ), false, $this->channel_rpc_timeout );
+        ), false, $this->channel_rpc_timeout);
     }
 
     /**
@@ -841,7 +841,6 @@ class AMQPChannel extends AbstractChannel
             foreach ($keys as $key) {
                 $this->internal_ack_handler($key, false, $handler);
             }
-
         } else {
             $message = $this->get_and_unset_message($delivery_tag);
             $this->dispatch_to_handler($handler, array($message));
